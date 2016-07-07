@@ -249,7 +249,7 @@ ul {
   padding: 0;
 }
 body {
-  color: violet;
+  padding-top: 100px;
 }
 figure {
   margin: 0;
@@ -271,4 +271,54 @@ h6,
 p {
   margin: 0;
   padding: 0;
+}
+.grid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.grid__el {
+  position: relative;
+  padding: 10px 20px;
+  width: 20%;
+  background: white;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.grid__el * {
+  transition: all 0.6s;
+}
+.grid__el h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.grid__el p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.grid__el a {
+  display: block;
+  margin-bottom: 10px;
+  color: blue;
+}
+.grid__el .expand {
+  -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+          transform-origin: top left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+.fade-out {
+  opacity: 0;
 }
